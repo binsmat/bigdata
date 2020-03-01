@@ -12,10 +12,10 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 public class StubCCDriver {
 
 	public static void main(String[] args) throws Exception {
-		//if (args.length != 2) {
-		//	System.out.printf("Usage: StubDriver <input dir> <output dir>\n");
-		//	System.exit(-1);
-		//}
+		if (args.length != 2) {
+			System.out.printf("Usage: StubDriver <input dir> <output dir>\n");
+			System.exit(-1);
+		}
 		JobConf conf = new JobConf();
 		Job job = new Job(conf, "wordcount");
 		job.setJarByClass(StubCCDriver.class);
